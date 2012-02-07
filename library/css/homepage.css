@@ -1,0 +1,358 @@
+.fontstack {
+  font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+  color: #222222;
+}
+/* 	-------------------------------
+	Quote Styling
+	-------------------------------
+*/.quote {
+  margin-top: 20px;
+}
+.quote p {
+  margin: 10px 0;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-family: "ColaborateThinRegular";
+  line-height: 50px;
+  font-weight: 300;
+  letter-spacing: .8px;
+}
+.quote p em {
+  font-style: normal;
+  color: #1b323b;
+}
+.quote-top {
+  background: url(../img/quote-top.png) no-repeat;
+  width: 960px;
+  height: 40px;
+  margin: 0 auto;
+}
+.quote-bottom {
+  background: url(../img/quote-bottom.png) no-repeat;
+  width: 960px;
+  height: 40px;
+  margin: 0 auto;
+}
+/* 	-------------------------------
+	Custom
+	-------------------------------
+*/#slider a {
+  border: none;
+}
+/* 	-------------------------------
+	Skill bars styling (Skill, Bar)
+	-------------------------------
+*/#bar {
+  list-style: none;
+  width: 800px;
+}
+#bar li {
+  border-right: 1px solid #162930;
+  width: 547.5px;
+}
+/* Last bottom should have a shadow */
+#bar li div.bottom {
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+/* Ellipse top */
+#bar li div.top {
+  background-color: #335f70;
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  width: 40px;
+  height: 50px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition-property: margin-left;
+  -moz-transition-property: margin-left;
+  -o-transition-property: margin-left;
+  -ms-transition-property: margin-left;
+  transition-property: margin-left;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+#bar li div.top img {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+#bar li div.top p {
+  color: #fff;
+  font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+  color: #222222;
+  color: #fff;
+  padding-left: 10px;
+  line-height: 32px;
+  opacity: 1;
+  text-shadow: 0px -1px 0 rgba(0, 0, 0, 0.2);
+}
+/* Bar bottom */
+#bar li div.bottom {
+  position: relative;
+  margin: 5px 0;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(-90deg, #1b323b, #2c5261);
+  background: -moz-linear-gradient(-90deg, #1b323b, #2c5261);
+  background: -o-linear-gradient(-90deg, #1b323b, #2c5261);
+  background: -ms-linear-gradient(-90deg, #1b323b, #2c5261);
+  background: linear-gradient(-90deg, #1b323b, #2c5261);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#1b323b), to(#2c5261));
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -o-transition-property: width;
+  -ms-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+#bar li div.bottom div.infobox {
+  padding: 0px 0 0 597.5px;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  -ms-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+#bar li div.bottom div.infobox h3 {
+  font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+  color: #222222;
+  width: 200px;
+  font-weight: normal;
+  line-height: 3.8;
+  font-size: 12px;
+}
+/* General hover actions */
+#bar li:hover div.bottom div.infobox {
+  color: #eee;
+}
+#bar li:hover div.bottom div.infobox p {
+  opacity: 1;
+}
+/* General span.attrib styling */
+#bar div.bottom div.infobox span.attrib {
+  width: 347.5px;
+  display: block;
+  margin: -40px 0 0 150px;
+  height: 30px;
+  padding: 10px;
+  line-height: 28px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  -ms-transition-duration: 500ms;
+  transition-duration: 500ms;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+/* htmlcss bar */
+#htmlcss div.top {
+  z-index: 99;
+}
+#htmlcss div.bottom {
+  z-index: 98;
+}
+#bar #htmlcss div.top {
+  z-index: 999;
+  background-color: #7da864;
+  margin-left: 462.5px;
+}
+#bar #htmlcss div.bottom {
+  z-index: 998;
+  background-color: #698d54;
+  width: 502.5px;
+  /* max 450 = 100% 225=50% 405=90% */
+
+  background: -webkit-linear-gradient(-90deg, #698d54, #506b40);
+  background: -moz-linear-gradient(-90deg, #698d54, #506b40);
+  background: -o-linear-gradient(-90deg, #698d54, #506b40);
+  background: -ms-linear-gradient(-90deg, #698d54, #506b40);
+  background: linear-gradient(-90deg, #698d54, #506b40);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#698d54), to(#506b40));
+}
+#htmlcss div.bottom div.infobox span.attrib {
+  background: #698d54;
+}
+#htmlcss:hover div.bottom div.infobox span.attrib {
+  opacity: 1;
+}
+/* javascript bar */
+#javascript div.top {
+  z-index: 97;
+}
+#javascript div.bottom {
+  z-index: 96;
+}
+#bar #javascript div.top {
+  z-index: 997;
+  background-color: #3f1150;
+  margin-left: 282.5px;
+}
+#bar #javascript div.bottom {
+  z-index: 996;
+  background-color: #340e43;
+  width: 322.5px;
+  background: -moz-linear-gradient(-90deg, #340e43, #1a0721);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#340e43), to(#1a0721));
+}
+#javascript div.bottom div.infobox span.attrib {
+  background: #3f1150;
+}
+#javascript:hover div.bottom div.infobox span.attrib {
+  opacity: 1;
+}
+/* php bar */
+#php div.top {
+  z-index: 95;
+}
+#php div.bottom {
+  z-index: 94;
+}
+#bar #php div.top {
+  z-index: 995;
+  background-color: #ff1a00;
+  margin-left: 372.5px;
+}
+#bar #php div.bottom {
+  z-index: 994;
+  background-color: #D12414;
+  width: 412.5px;
+  background: -moz-linear-gradient(-90deg, #d12414, #b70303);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#d12414), to(#b70303));
+}
+#php div.bottom div.infobox span.attrib {
+  background: #ff1a00;
+}
+#php:hover div.bottom div.infobox span.attrib {
+  opacity: 1;
+}
+/* wordpress  bar */
+#wordpress div.top {
+  z-index: 93;
+}
+#wordpress div.bottom {
+  z-index: 92;
+}
+#bar #wordpress div.top {
+  z-index: 993;
+  background-color: #2a8cbb;
+  margin-left: 417.5px;
+}
+#bar #wordpress div.bottom {
+  z-index: 992;
+  background-color: #2885AF;
+  width: 457.5px;
+  background: -moz-linear-gradient(-90deg, #2885af, #216f94);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#2885af), to(#216f94));
+}
+#wordpress div.bottom div.infobox span.attrib {
+  background: #2a8cbb;
+}
+#wordpress:hover div.bottom div.infobox span.attrib {
+  opacity: 1;
+}
+/* photoshop bar */
+#photoshop div.top {
+  z-index: 91;
+}
+#photoshop div.bottom {
+  z-index: 90;
+}
+#bar #photoshop div.top {
+  z-index: 991;
+  background-color: #1f81ac;
+  margin-left: 462.5px;
+}
+#bar #photoshop div.bottom {
+  z-index: 990;
+  background-color: #1a6c90;
+  width: 502.5px;
+  background: -moz-linear-gradient(-90deg, #1a6c90, #14506b);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#1a6c90), to(#14506b));
+}
+/* illustrator bar */
+#illustrator div.top {
+  z-index: 91;
+}
+#illustrator div.bottom {
+  z-index: 90;
+}
+#bar #illustrator div.top {
+  z-index: 991;
+  background-color: #ec8a00;
+  margin-left: 372.5px;
+}
+#bar #illustrator div.bottom {
+  z-index: 990;
+  background-color: #d57600;
+  width: 412.5px;
+  background: -moz-linear-gradient(-90deg, #d57600, #b65c07);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#d57600), to(#b65c07));
+}
+/* fireworks bar */
+#fireworks div.top {
+  z-index: 91;
+}
+#fireworks div.bottom {
+  z-index: 90;
+}
+#bar #fireworks div.top {
+  z-index: 991;
+  background-color: #DBAF00;
+  margin-left: 372.5px;
+}
+#bar #fireworks div.bottom {
+  z-index: 990;
+  background-color: #d57600;
+  width: 412.5px;
+  background: -moz-linear-gradient(-90deg, #d4a600, #b47f00);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#d4a600), to(#b47f00));
+}
+/* flash bar */
+#flash div.top {
+  z-index: 91;
+}
+#flash div.bottom {
+  z-index: 90;
+}
+#bar #flash div.top {
+  z-index: 991;
+  background-color: #bc003c;
+  margin-left: 282.5px;
+}
+#bar #flash div.bottom {
+  z-index: 990;
+  background-color: #9d0032;
+  width: 322.5px;
+  background: -moz-linear-gradient(-90deg, #9d0032, #7a0027);
+  background: -webkit-gradient(linear, 0 top, 0 bottom, from(#9d0032), to(#7a0027));
+}

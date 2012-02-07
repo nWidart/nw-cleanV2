@@ -1,0 +1,96 @@
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+	body {
+		background: url('../img/bg.jpg') repeat;
+		border-top: 4px solid #112025 ;
+	}
+	
+	.header {
+		height: 100px;
+		margin-top: 10px;
+	}
+	
+	
+	#main-navigation {
+		list-style: none;
+		margin: 10px 0 0 0;
+		/* margin-right: -14px; */
+		float: right;
+	}
+	#main-navigation li {
+		padding: 0 10px;
+		float: left;
+	}
+	
+	#main-navigation li a {
+		font-family: "colaborate-1","colaborate-2", CaviarDreamsBold, sans-serif;
+		font-weight: 300;
+		font-size:  17px;
+		text-decoration: none;
+		color: #1b323b;
+		display: block;
+		padding: 5px 10px;
+		-webkit-transition-property: background;
+		-webkit-transition-duration: .9s;
+		-moz-transition-property: background;
+		-moz-transition-duration: .9s;
+
+
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-box-shadow: inset 1px 1px 5px rgba(0,0,0,0);
+		-moz-box-shadow: inset 1px 1px 5px rgba(0,0,0,0);
+
+	}
+		#main-navigation li a:hover {
+			background: #1b323b ;
+			color: #fff!important;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-box-shadow: inset 1px 1px 5px rgba(0,0,0,.3);
+			-moz-box-shadow: inset 1px 1px 5px rgba(0,0,0,.3);
+			
+			
+		}
+		
+	
+	.markup img {
+		background: #e6e7e7;
+		padding: 5px;
+		border: 1px solid #fff;
+	}
+	
+	
+	.footer {
+		margin-top: 50px;
+		background: url(../img/footer-bg.jpg) repeat-x;
+		height: 357px;
+	}
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		
+	}
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}
