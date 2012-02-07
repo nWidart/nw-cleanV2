@@ -107,7 +107,7 @@ $(window).smartresize(function(){
     masonry: { columnWidth: $('.item').width() / 8 }
   });
 });
-
+//hello world
 </script>
 
 </body>
