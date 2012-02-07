@@ -53,7 +53,7 @@
     </div>
   </div>
 </div><!-- end footer-dark -->
-<!-- does this work? -->
+
 <script src="<?php bloginfo('stylesheet_directory') ?>/library/js/functions.js"></script>
 <script type="text/javascript">
 	var $container = $('#gallery');
