@@ -44,6 +44,9 @@ a:hover {
   border-bottom: 1px solid #112025;
   font-style: italic;
 }
+.fixed {
+  position: fixed;
+}
 /* 	-------------------------------
 	MIXINS 
 	-------------------------------
@@ -443,6 +446,7 @@ h5 {
   background: #112025;
   padding: 5px 0;
   margin-bottom: 20px;
+  margin-top: 50px;
   -moz-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
@@ -456,7 +460,16 @@ h5 {
   color: #fff;
 }
 /* --- Next - Previous Pages links --- */
-
+.sub-nav {
+  margin-bottom: 20px;
+}
+.sub-nav .row.fixed {
+  top: 10px;
+  left: 20%;
+}
+.sub-nav.fix {
+  background : #FFF;
+}
 .sub-nav a {
   border: none;
 }
@@ -471,18 +484,18 @@ h5 {
 }
 
 .sub-nav .prev a {
-  background: url("../img/prev.png") no-repeat left center;
+  background: url("../img/prev.png") no-repeat left 2px;
   padding-left: 20px;
 }
 .sub-nav .prev a:hover {
-  background: url("../img/prev-hover.png") no-repeat left center;
+  background: url("../img/prev-hover.png") no-repeat left 2px;
 }
 .sub-nav .next a {
-  background: url("../img/next.png") no-repeat right center;
+  background: url("../img/next.png") no-repeat right 2px;
   padding-right: 20px;
 }
 .sub-nav .next a:hover {
-  background: url("../img/next-hover.png") no-repeat right center;
+  background: url("../img/next-hover.png") no-repeat right 2px;
 }
 
 .sub-nav .back a span {

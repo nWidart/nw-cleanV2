@@ -5,7 +5,7 @@
 .filter .row {
   min-height: 50px;
 }
-h2 {
+.filter h2 {
   float: left;
 }
 /* ---------------------------- Portfolio page (isotope) --------------------------- */
@@ -264,8 +264,7 @@ a.item-title:hover {
 
   background: -moz-linear-gradient(top, #1d373f 0%, #15272d 100%);
   /* firefox */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d373f), color-stop(100%, #15272d));
+ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d373f), color-stop(100%, #15272d));
   /* webkit */
   border-top: 1px solid #213d47;
   border-right: 1px solid #1d363f;
@@ -311,9 +310,51 @@ a.item-title:hover {
   top: 3px;
 }
 
-/* Single portfolio page - port. navigation */
+/* Portfolio single page */
+.content .row {
+  
+}
 
+.content img {
+  border: 1px solid #fff;
+  margin-bottom: 20px;
+}
+.content .last  {
+}
+.content .last ul {
+  list-style: none;
+}
+.content .last ul li {
+  position: relative;
+  margin-left: 30px;
+}
+.content .last ul li:before {
+  content: '';
+  background: url('../img/nwCleanSprite.png') no-repeat -288px -9px; 
+  width: 7px; 
+  height: 11px;
+  display: block;
+  position: absolute;
+  left: -15px;
+  top: 4px;
+}
 
+.content h3 {
+  font-family: 'ColaborateLightRegular';
+  font-size: 18px;
+  color: #112025;
+  line-height: 18px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content .last.fixed {
+  width: 30%;
+  left: 50.99%;
+  top: 35px;
+  
+}
 
 
 

@@ -53,7 +53,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!-- 1140px Grid styles for IE -->
-	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="library/css/ie.css" type="text/css" media="screen" /><![endif]-->
 
 	<!-- The 1140px Grid - http://cssgrid.net/ -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/1140.css" type="text/css" media="screen" />
@@ -66,14 +66,14 @@
 	<?php if ( is_front_page() ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/homepage.css" type="text/css" media="screen" />
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/flexslider.css" type="text/css">
-	<?php } elseif ( is_page('53')) { ?>
+	<?php } elseif ( is_page('53') || '53' == $post->post_parent ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/portfolio.css" type="text/css">
 	<?php } else if ( is_page('9') ) {?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/blog.css" type="text/css">
 	<?php } ?>	
 	
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
-	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory') ?>/js/css3-mediaqueries.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/css3-mediaqueries.js"></script>
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>

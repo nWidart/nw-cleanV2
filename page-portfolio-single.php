@@ -36,9 +36,10 @@ Template Name: Portfolio Single
 </div>
 </div><!-- end container -->
 
-<div class="container">
+<div class="container content">
+	
 	<div class="row">
-		<div class="sevencol">
+		<div class="sixcol">
 			<?php 
 				$portfolioCF = get_post_meta($post->ID, 'portfolio_images', true);
 				if ($portfolioCF != "") {
@@ -54,9 +55,14 @@ Template Name: Portfolio Single
 			?>
 
 		</div>
-		<div class="fivecol last">
-			<?php the_title(); ?>
-		</div>	
+		
+		<div class="sixcol last">
+			<h2><?php the_title(); ?></h2>
+			<p>
+				<?php the_content(); ?>
+			</p>
+		</div>
+		
 	</div>
 	
 </div>

@@ -110,6 +110,55 @@ $(window).smartresize(function(){
 
 //End filter script
 
+// ------                                         --------/
+//fixing the portfolio single page content if scrolled
+// ------                                         --------/
+
+$(document).ready(function () {
+  var target = $('.content .last');
+  var top = target.offset().top - parseFloat(target.css('marginTop').replace(/auto/, 0));
+
+  $(window).scroll(function (event) {
+    // what the y position of the scroll is
+    var y = $(this).scrollTop();
+    //checking if the content doesnt touch the footer (if it does , not fixed)
+    var maxY = ( $('.footer').offset().top ) - ( target.height() );
+      // whether that's below the footer
+      if (y >= top && y < maxY) {
+        // if so, ad the fixed class
+        target.addClass('fixed');
+      } else {
+        // otherwise remove it
+        target.removeClass('fixed');
+      }
+  });
+});
+
+
+// ------                                         --------/
+//fixing the portfolio items navigation if scrolled
+// ------                                         --------/
+$(document).ready(function () {
+  var target = $('.sub-nav .row');
+  var top = target.offset().top - parseFloat(target.css('marginTop').replace(/auto/, 0));
+
+  $(window).scroll(function (event) {
+    // what the y position of the scroll is
+    var y = $(this).scrollTop();
+    //checking if the content doesnt touch the footer (if it does , not fixed)
+    var maxY = ( $('.footer').offset().top ) - ( target.height() );
+      // whether that's below the footer
+      if (y >= top && y < maxY) {
+        // if so, ad the fixed class
+        target.addClass('fixed');
+        $('.sub-nav').addClass('fix');
+      } else {
+        // otherwise remove it
+        target.removeClass('fixed');
+        $('.sub-nav').removeClass('fix');
+      }
+  });
+});
 
 </script>
 
