@@ -108,6 +108,9 @@ $(window).smartresize(function(){
   });
 });
 
+//End filter script
+
+
 </script>
 
 </body>

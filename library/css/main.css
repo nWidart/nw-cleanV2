@@ -457,30 +457,45 @@ h5 {
 }
 /* --- Next - Previous Pages links --- */
 
-
-}
 .sub-nav a {
-  border:none;
+  border: none;
+}
+.prev a, .next a {
   text-decoration: none;
   color: #222;
+  min-height:16px;
+  display: block;
 }
 .sub-nav .next a {
   float: right;
 }
 
 .sub-nav .prev a {
-  position: relative;
-  padding-left: 15px;
+  background: url("../img/prev.png") no-repeat left center;
+  padding-left: 20px;
 }
-.sub-nav .prev a:before {
-  content: " ";
-  background: url('../img/nwCleanSprite.png') no-repeat -453px -10px;
-  width: 11px;
-  height: 16px;
-  display: block;
-  position:absolute;
+.sub-nav .prev a:hover {
+  background: url("../img/prev-hover.png") no-repeat left center;
+}
+.sub-nav .next a {
+  background: url("../img/next.png") no-repeat right center;
+  padding-right: 20px;
+}
+.sub-nav .next a:hover {
+  background: url("../img/next-hover.png") no-repeat right center;
 }
 
+.sub-nav .back a span {
+  background: url("../img/blocks.png") no-repeat;
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0px auto;
+  margin-top: -7px;
+}
+.sub-nav .back a span:hover {
+  background: url("../img/blocks-hover.png") no-repeat;
+}
 
 /* ============================= */
 /* ! Layout for large screen version   */
