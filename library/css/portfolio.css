@@ -231,84 +231,15 @@ a.item-title:hover {
   display: block;
   float: left;
 }
-.view-link {
-  background: #1B323B;
-  background: -moz-linear-gradient(top, #1b323b 0%, #112026 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1b323b), color-stop(100%, #112026));
-  border-top: 1px solid #213d47;
-  border-right: 1px solid #1d363f;
-  border-bottom: 1px solid #112025;
-  border-left: 1px solid #1d363f;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: inset 0 1px 0 0 #264753, 0 1px 2px 0 #b3b3b3;
-  -webkit-box-shadow: inset 0 1px 0 0 #264753, 0 1px 2px 0 #b3b3b3;
-  color: #fff;
-  font-family: "lucida grande", sans-serif;
-  font-size: 11px;
-  font-weight: normal;
-  line-height: 1;
-  padding: 5px 0 6px 5px;
-  text-align: center;
-  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
-  width: 130px;
-  -webkit-background-clip: padding-box;
-  position: absolute;
-  right: 0;
-  bottom: -3px;
-}
-.view-link:hover {
-  background: #1D373F;
-  /* old browsers */
 
-  background: -moz-linear-gradient(top, #1d373f 0%, #15272d 100%);
-  /* firefox */
- background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d373f), color-stop(100%, #15272d));
-  /* webkit */
-  border-top: 1px solid #213d47;
-  border-right: 1px solid #1d363f;
-  border-bottom: 1px solid #112025;
-  border-left: 1px solid #1d363f;
-  -moz-box-shadow: inset 0 1px 0 0 #294b58;
-  -webkit-box-shadow: inset 0 1px 0 0 #294b58;
-  cursor: pointer;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
-  -webkit-background-clip: padding-box;
-}
-.view-link:active {
-  background: #112026;
-  /* old browsers */
+/* Personalised buttons */
 
-  background: -moz-linear-gradient(top, #112026 0%, #1b323b 99%);
-  /* firefox */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #112026), color-stop(99%, #1b323b));
-  /* webkit */
-
-  border: 1px solid #213d47;
-  border-bottom: 1px solid #112025;
-  /*
-	-moz-box-shadow: inset 0 0 6px 3px #213d47, 0 1px 0 0 #fff;
-	-webkit-box-shadow: inset 0 0 6px 3px #1657b5, 0 1px 0 0 #fff;
-	*/
-
-  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3);
-  -webkit-background-clip: padding-box;
+.hover-image .btn-primary {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
-.view-link::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-.icn_link {
-  background: url('../img/nwCleanSprite.png') no-repeat -24px -72px;
-  width: 15px;
-  height: 15px;
-  display: block;
-  position: absolute;
-  left: 10px;
-  top: 3px;
-}
+
 
 /* Portfolio single page */
 .content .row {
@@ -356,6 +287,10 @@ a.item-title:hover {
   
 }
 
+.the_content {
+	margin-bottom: 20px;
+}
 
-
-
+.sub-nav [class^="icon-"] {
+	float: left;
+}

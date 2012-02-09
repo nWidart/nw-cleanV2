@@ -1,0 +1,227 @@
+h3 {
+  font-family: 'ColaborateLightRegular';
+  font-size: 18px;
+  color: #112025;
+  line-height: 18px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* Gravity form styling */
+.markup .gform_wrapper {
+	max-width: 100%;
+}
+.markup .gform_wrapper .top_label input.medium,
+.markup .gform_wrapper .top_label select.medium {
+	width: 40% !important;
+}
+.markup .gform_wrapper .ginput_complex input, 
+.markup .gform_wrapper .ginput_complex select,
+.markup .gform_wrapper .field_name_first input,
+.markup .gform_wrapper .ginput_complex .ginput_left input {
+	width: 84% !important;
+}
+.markup .gform_wrapper .top_label input.medium,
+.markup .gform_wrapper .top_label select.medium,
+.markup .gform_wrapper .ginput_complex input, 
+.markup .gform_wrapper .ginput_complex select,
+.markup .gform_wrapper .field_name_first input,
+.markup .gform_wrapper .ginput_complex .ginput_left input {
+	background: rgba(255,255,255,.4);
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	padding: 5px;
+}
+.markup .gform_wrapper .top_label input.medium:focus,
+.markup .gform_wrapper .top_label select.medium:focus,
+.markup .gform_wrapper .ginput_complex input:focus, 
+.markup .gform_wrapper .ginput_complex select:focus,
+.markup .gform_wrapper .field_name_first input:focus,
+.markup .gform_wrapper .ginput_complex .ginput_left input:focus,
+.markup .gform_wrapper .top_label input.medium:hover,
+.markup .gform_wrapper .top_label select.medium:hover,
+.markup .gform_wrapper .ginput_complex input:hover, 
+.markup .gform_wrapper .ginput_complex select:hover,
+.markup .gform_wrapper .field_name_first input:hover,
+.markup .gform_wrapper .ginput_complex .ginput_left input:hover {
+	background: rgba(255,255,255,.8);
+}
+.markup .gform_wrapper .top_label input.medium:focus,
+.markup .gform_wrapper .top_label select.medium:focus,
+.markup .gform_wrapper .ginput_complex input:focus, 
+.markup .gform_wrapper .ginput_complex select:focus,
+.markup .gform_wrapper .field_name_first input:focus,
+.markup .gform_wrapper .ginput_complex .ginput_left input:focus {
+	box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+}
+
+.markup .gform_wrapper input.button {
+	display: inline-block;
+	padding: 4px 10px 4px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.25);
+	background-color: #23414c;
+	background-image: -moz-linear-gradient(top, #23414C, #112026);
+	background-image: -ms-linear-gradient(top, #23414C, #112026);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#23414C), to(#112026));
+	background-image: -webkit-linear-gradient(top, #23414C, #112026);
+	background-image: -o-linear-gradient(top, #23414C, #112026);
+	background-image: linear-gradient(top, #23414C, #112026);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23414C', endColorstr='#112026', GradientType=0);
+	border-color: #112026 #112026 #23414C;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow:  0 1px 2px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	*margin-left: .3em;
+	
+}
+.markup .gform_wrapper input.button:hover {
+	color: #FFF;
+	background-color: #112026;
+	background-position: 0 -15px;
+  	-webkit-transition: background-position 0.1s linear;
+  	-moz-transition: background-position 0.1s linear;
+  	-ms-transition: background-position 0.1s linear;
+  	-o-transition: background-position 0.1s linear;
+  	transition: background-position 0.1s linear;
+}
+.markup .gform_wrapper input.button:active {
+	background-color: #003399 \9;
+	background-image: none;
+   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+   outline:none;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 27px;
+  font-size: 19.5px;
+  line-height: 36px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+label,
+input,
+button,
+select,
+textarea {
+  font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333;
+}
+input,
+textarea,
+select,
+.uneditable-input {
+  display: inline-block;
+  width: 40%;
+  height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+label input, label textarea, label select {
+  display: block;
+}
+input[type="image"], input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE7 */
+
+  line-height: normal;
+  border: 0;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.textarea {
+	border: none;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+	
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	background: rgba(255,255,255,.4);
+}
+input:focus, 
+.textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-8 */
+
+}
+.textarea:focus,
+.textarea:active,
+.textarea:hover {
+	background: rgba(255,255,255,.8);
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+  width: auto;
+  height: auto;
+}
+select, input[type="file"] {
+  height: 28px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+
+  line-height: 28px;
+}
