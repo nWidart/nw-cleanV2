@@ -23,7 +23,25 @@ add_theme_support( 'post-formats',
 );
 add_post_type_support( 'post', 'post-formats' );
 add_post_type_support( 'page', 'post-formats' );
+// add_post_type_support( '', 'post-formats' );
 // and other custom post types if you have them
+
+
+
+// Styling post types
+// Adds classes for custom post types to body_class() and post_class()
+function fb_add_body_class( $class ) {
+	$post_type = 'standard'; // the Post Type
+	if ( get_query_var('post_type') === $post_type ) { // only, if post type is active
+		$class[] = $post_type;
+		$class[] = 'type-' . $post_type;
+	}
+	return $class;
+}
+// add_filter( 'post_class', 'fb_add_body_class' );
+
+
+
 
 // A portfolio category
 add_action('init', 'project_custom_init');  

@@ -58,6 +58,11 @@ h3 {
 	box-shadow: inset 0 0 3px rgba(0,0,0,.3);
 }
 
+
+.markup input[type='file'] {
+  
+  width: 50%;
+}
 .markup .gform_wrapper input.button {
 	display: inline-block;
 	padding: 4px 10px 4px;

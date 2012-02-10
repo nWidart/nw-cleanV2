@@ -167,9 +167,7 @@
   background: #000000 url(../img/overlay-view.png) no-repeat center center;
   border: 1px solid #fff;
 }
-.item a {
-  border-bottom: none;
-}
+
 .item:nth-child(3n+3) {
   margin-right: 0;
 }
@@ -293,4 +291,8 @@ a.item-title:hover {
 
 .sub-nav [class^="icon-"] {
 	float: left;
+}
+a.btn {
+  text-decoration:none;
+
 }

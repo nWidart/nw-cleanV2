@@ -66,7 +66,7 @@ Template Name: Portfolio Single
 				$projectUrl = get_post_meta($post->ID, 'project_url', true); 
 				if ($projectUrl != "") {
 			?>
-				<a class="btn btn-primary" rel="twipsy" title="Visit: <?php the_title(); ?>">Visit the website <i class="icon-share-alt icon-white"></i></a>
+				<a href="<?php echo get_post_meta($post->ID, 'project_url', true); ?>" class="btn btn-primary" rel="twipsy" title="Visit: <?php the_title(); ?>">Visit the website <i class="icon-share-alt icon-white"></i></a>
 			<?php		
 				} else {
 			?>
