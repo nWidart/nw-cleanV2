@@ -182,3 +182,7 @@
 .entrycontent .threecol ul p a {
   color: #354246;
 }
+.entrycontent span.read-more {
+  display: none;
+}
+

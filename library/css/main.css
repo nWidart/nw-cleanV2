@@ -560,6 +560,18 @@ h5 {
 .icon-user {
   background-position: -168px 0;
 }
+.icon-list-alt {
+  background-position: -264px -24px;
+}
+.icon-tag {
+  background-position: 0 -48px;
+}
+.icon-tags {
+  background-position: -25px -48px;
+}
+.icon-comment {
+  background-position: -240px -120px;
+}
 /* --- INIT: buttons --- */
 .button,
 .btn {
