@@ -28,12 +28,10 @@
     <div class="fourcol last">
      <h5>Tweets</h5>
      <?php if ( ! dynamic_sidebar( 'Third Footer Widget Area' ) ) : ?>
-     <ul>
-    		<li><a href="">Default Styling</a></li>
-    		<li><a href="">Default Styling</a></li>
-    		<li><a href="">Default Styling</a></li>
-    		<li><a href="">Default Styling</a></li>
-    	</ul>
+        <div id="tweets">  
+        <h6 id="error">There was a problem fetching tweets</h6>
+        <h6 id="preload">Currently loading your tweets...</h6>
+        </div><!-- end tweets -->
     	<?php endif; ?>
     </div>
     
@@ -56,6 +54,15 @@
 
 <script src="<?php bloginfo('stylesheet_directory') ?>/library/js/functions.js"></script>
 <script type="text/javascript">
+// Flexslider
+$('.flexslider').flexslider({
+  animation: "fade",
+  animationDuration: 1000,
+  slideshowSpeed: 5000,
+});
+
+
+// Isotope
 	var $container = $('#gallery');
 	
 	$container.imagesLoaded( function(){

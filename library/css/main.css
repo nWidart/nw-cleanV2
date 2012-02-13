@@ -290,10 +290,61 @@ p {
 	-------------------------------
 */#slider {
   width: 80%;
-  max-width: 900px;
+  max-width: 1140px;
   margin: 0 auto;
-  margin-top: 50px;
 }
+
+#slider .flexslider .slides {
+  height: 350px;
+  overflow: hidden;
+}
+
+/*the next & previous buttons*/
+#slider .flex-direction-nav li a {
+  /*background: url("../img/bg_direction_nav.png") no-repeat scroll 0 0 transparent;*/
+  background: url('../img/nwCleanSprite.png') no-repeat transparent;
+  cursor: pointer;
+  display: block;
+  /*height: 52px;*/
+  margin: -13px 0 0;
+  position: absolute;
+  text-indent: -9999px;
+  top: 50%;
+  /*width: 52px;*/
+  width: 51px; height: 49px;
+}
+#slider .flex-direction-nav li .prev {
+  background-position:-166px -96px;
+}
+#slider .flex-direction-nav li .prev:hover {
+  background-position:-103px -96px;
+}
+#slider .flex-direction-nav li .prev:active {
+  background-position:-228px -96px;
+}
+#slider .flex-direction-nav li .next {
+  
+  background-position:-383px -96px;
+}
+#slider .flex-direction-nav li .next:hover {
+  background-position:-316px -96px;
+}
+#slider .flex-direction-nav li .next:active {
+ background-position: -449px -96px;
+}
+/*the state buttons*/
+#slider .flex-control-nav li a {
+  background: url('../img/nwCleanSprite.png') no-repeat -258px -40px; 
+  width: 16px; 
+  height: 15px;
+}
+#slider .flex-control-nav li a.active {
+  background-position:-239px -40px;
+}
+#slider .flex-control-nav li a:hover {
+  background-position:-239px -40px;
+}
+
 /*  -------------------------------
   featured section
   -------------------------------
@@ -343,7 +394,7 @@ p {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.footer ul.tweets {
+.footer #tweets ul {
   color: #e3e3e3;
 }
 
@@ -360,6 +411,10 @@ h5 {
   line-height: 18px;
   margin-top: 5px;
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.4), 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+h6#error,
+h6#preload {
+  color: #e3e3e3;
 }
 .footer2 {
   background: #112025;

@@ -81,16 +81,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.flexslider.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/bootstrap-twipsy.js"></script>
-	
-	
-	<!-- Hook up the FlexSlider -->
-	<script type="text/javascript">
-		$(window).load(function() {
-			$('.flexslider').flexslider();
-		});
-		
-		
-	</script>
 	<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.isotope.min.js"></script>
 
 <?php
