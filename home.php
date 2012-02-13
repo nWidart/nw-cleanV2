@@ -1,29 +1,11 @@
 <?php get_header(); ?>
 
-<div id="slider">
-	<div class="flexslider">
-		    <ul class="slides">
-	    	<li>
-	    		<img src="<?php bloginfo('stylesheet_directory') ?>/library/img/slider/as.jpg" />
-	    	</li>
-	    	<li>
-	    		<img src="<?php bloginfo('stylesheet_directory') ?>/library/img/slider/as.jpg" />
-	    	</li>
-	    	<li>
-	    		<img src="<?php bloginfo('stylesheet_directory') ?>/library/img/slider/as.jpg" />
-	    	</li>
-	    	<li>
-	    		<img src="<?php bloginfo('stylesheet_directory') ?>/library/img/slider/as.jpg" />
-	    	</li>
-	    	<li>
-	    		<img src="<?php bloginfo('stylesheet_directory') ?>/library/img/slider/as.jpg" />
-	    	</li>
-	    	<li>
-	    		<img src="<?php bloginfo('stylesheet_directory') ?>/library/img/slider/as.jpg" />
-	    	</li>
-		    </ul>
+<div class="container featured">
+	<div class="row">
+		<?php if(function_exists('displayDDSlider')) { echo displayDDSlider(array(name=>"Featured")); } ?>	
 	</div>
-</div><!-- end #Slider -->
+
+</div>
 
 <div class="container quote">
 	<div class="row">

@@ -45,11 +45,13 @@ Template Name: Portfolio Single
 				if ($portfolioCF != "") {
 					$images = explode(",", $portfolioCF);
 					foreach ($images as $image) {
-			?>			
+			?>
+						
 				<img src="<?php 
 						echo bloginfo('template_directory');
-						echo $images[0]; ?>" alt="<?php the_title(); ?>" />
+						echo $image; ?>" alt="<?php the_title(); ?>" />
 			<?php
+					
 					}
 				}
 			?>
@@ -57,9 +59,10 @@ Template Name: Portfolio Single
 		</div>
 		
 		<div class="sixcol last">
-			<h2><?php the_title(); ?></h2>
 			
-				<div class="the_content"><?php the_content(); ?></div>
+			<h2><?php the_title(); ?></h2>
+		
+			<div class="the_content"><?php the_content(); ?></div>
 				
 			
 			<?php 

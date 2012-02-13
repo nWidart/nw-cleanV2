@@ -55,6 +55,7 @@
   position: relative;
   min-height: 41px;
   max-width: 760px;
+  margin-bottom: 0;
 }
 .blog h2::after {
   background: url('../img/nwCleanSprite.png') no-repeat;
@@ -65,14 +66,22 @@
   right: -83px;
   top: -5px;
 }
+/*The different post types styling
+*/
+/*1. Post type*/
 .blog h2.post::after {
   content: '';
   background-position: -7px -95px;
 }
+/*2. Link type*/
+
 .blog h2.link::after {
   content: '';
   background-position: -55px -95px;
 }
+
+
+
 .blog h3 {
   font-family: 'ColaborateLightRegular';
   font-size: 18px;
@@ -137,8 +146,7 @@
 }
 .entrycontent .blog-post-cover-img {
   margin-bottom: 25px;
-  margin: 0 auto;
-  width: 590px;
+  width: 68%;
   padding: 5px;
   background: #112025;
   -webkit-border-radius: 5px;
@@ -165,7 +173,7 @@
   padding-right: 3.8%;
 }
 .entrycontent .eightcol, .entrycontent .threecol {
-  margin-top: 20px;
+ /* margin-top: 20px;*/
 }
 .entrycontent .threecol ul {
   list-style: none;

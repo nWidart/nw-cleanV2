@@ -7,20 +7,27 @@ Template Name: Blog
 
 
 <div class="container blog">
-<?php 
-	//query_posts('&paged='.$paged );
-	//if ( have_posts() ) : while ( have_posts() ) : the_post();
-	$query = new WP_Query('paged=' . get_query_var( 'paged' ));
-	while($query->have_posts()) : $query->the_post();
-?>
-
   <div class="row">
+  <?php 
+  //query_posts('&paged='.$paged );
+  //if ( have_posts() ) : while ( have_posts() ) : the_post();
+  $query = new WP_Query('paged=' . get_query_var( 'paged' ));
+  while($query->have_posts()) : $query->the_post();
+?>
   	<div class="ninecol entrycontent"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php
       // getting the post type 
       $blog_post_type = get_post_meta($post->ID, 'blog_post_type', true);
+      $post_url = get_permalink();
+      // if link type get the url
+
+      if ($blog_post_type == "link") {
+        $blog_post_link = get_post_meta($post->ID, 'blog_post_link', true);
+        //override the post url to the link
+        $post_url = $blog_post_link;
+      }
 ?>  	
-  		<h2 class="<?php echo $blog_post_type; ?>"><a href="<?php echo get_permalink() ?>" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+  		<h2 class="<?php echo $blog_post_type; ?>"><a href="<?php echo $post_url; ?>" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
   		<?php
       //getting thumbnail meta
@@ -33,7 +40,7 @@ Template Name: Blog
   		<div class="eightcol">
   			<?php the_excerpt(''); ?>
   			<p>
-  				<a href="<?php echo get_permalink() ?>">Continue reading →</a>
+  				<a href="<?php echo $post_url; ?>">Continue reading →</a>
   			</p>
   			
   		</div>
