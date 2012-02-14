@@ -61,18 +61,18 @@
 	<!-- Your styles -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/main.css" type="text/css" media="screen" />
-	
 		
 	<?php if ( is_front_page() ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/homepage.css" type="text/css" media="screen" />
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/flexslider.css" type="text/css">
 	<?php } elseif ( is_page('53') || '53' == $post->post_parent ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/portfolio.css" type="text/css">
-	<?php } else if ( is_page('9') ) {?>
+	<?php } else if ( is_page('9') || is_single() ) {?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/blog.css" type="text/css">
 	<?php } else if ( is_page('11') ) {?>	
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/contact.css" type="text/css">
 	<?php } ?>
+
 	
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/css3-mediaqueries.js"></script>

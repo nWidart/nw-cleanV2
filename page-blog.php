@@ -11,7 +11,8 @@ Template Name: Blog
   <?php 
   //query_posts('&paged='.$paged );
   //if ( have_posts() ) : while ( have_posts() ) : the_post();
-  $query = new WP_Query('paged=' . get_query_var( 'paged' ));
+  // $query = new WP_Query('paged=' . get_query_var( 'paged' ));
+  $query = new WP_Query('posts_per_page=20');
   while($query->have_posts()) : $query->the_post();
 ?>
   	<div class="ninecol entrycontent"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -59,7 +60,7 @@ Template Name: Blog
   					<p><i class="icon-list-alt"></i> <!-- <span>Category:</span> --> <a href=""><?php the_category(', ') ?></a></p>
   				</li>
   				<li>
-  					<p><i class="icon-comment"></i> <!-- <span>Comments:</span> --> <a href=""><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></a></p>
+  					<p><i class="icon-comment"></i> <!-- <span>Comments:</span> --> <a href="#disqus_thread">Comments</a></p>
   				</li>
   			</ul>
   		</div>
@@ -72,10 +73,25 @@ Template Name: Blog
     ?>
   	
   	</div>
+    
+   
 
     <?php get_sidebar(); ?>
     <?php endwhile; ?>
 	<?php wp_reset_postdata(); // reset the query ?>
+  <div class="ninecol">
+    
+      <?php //posts_nav_link('sep','prelabel','nxtlabel'); ?>
+      <?php previous_posts_link('label','max_pages'); ?>
+
+      <?php next_posts_link('label','max_pages'); ?>
+  </div>
+     <?php 
+      if(function_exists('wp_paginate')) {
+      wp_paginate();
+      } 
+    ?>
+    
   </div><!-- end row -->  
  
 </div><!-- end  -->
