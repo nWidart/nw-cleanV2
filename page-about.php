@@ -19,7 +19,6 @@ Template Name: About
 	<?php wp_reset_postdata(); // reset the query ?>
 
 
-
 		<?php
 			// Getting the About info from meta
 			$portrait_img = get_post_meta($post->ID, 'portrait_img', true);

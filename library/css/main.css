@@ -128,6 +128,7 @@ h2 {
   float: left;
   list-style: none;
 }
+
 #menu-main-navigation-menu li a {
   font-family: 'ColaborateLightRegular', sans-serif;
   font-weight: 300;
@@ -154,6 +155,7 @@ h2 {
   -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0);
   box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0);
 }
+body.single .menu-item-24 a,
 #menu-main-navigation-menu li a.active {
   background: #112025;
   color: #fff !important;

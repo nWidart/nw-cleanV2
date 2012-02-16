@@ -1,6 +1,15 @@
 <?php get_header(); ?>
 
 
+<div class="container breadcrump">
+  <div class="row">
+    <?php 
+    if ( function_exists('yoast_breadcrumb') ) {
+      yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+    }
+  ?>
+  </div>
+</div><!-- end breadcrump -->
 <div class="container blog">
   <div class="row">
   <?php 
@@ -19,7 +28,7 @@
         $post_url = $blog_post_link;
       }
 ?>  	
-  		<h2 class="<?php echo $blog_post_type; ?>"><a href="<?php echo $post_url; ?>" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+  		<h2 id="title" class="<?php echo $blog_post_type; ?>"><a href="<?php echo $post_url; ?>" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
   		<?php
       //getting thumbnail meta
@@ -46,7 +55,10 @@
             <p><i class="icon-list-alt"></i> <!-- <span>Category:</span> --> <a href=""><?php the_category(', ') ?></a></p>
           </li>
           <li>
-            <p><i class="icon-comment"></i> <!-- <span>Comments:</span> --> <a href="#disqus_thread">Comments</a></p>
+            <p><i class="icon-comment"></i> <!-- <span>Comments:</span> --> <a href=""><?php 
+                                                                                          $comments_count = wp_count_comments( 2492 ); 
+                                                                                          echo "Total Comments: " . $comments_count->total_comments;
+                                                                                        ?></a></p>
           </li>
         </ul>
       </div><!-- end threecol -->

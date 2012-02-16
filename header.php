@@ -69,6 +69,7 @@
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/portfolio.css" type="text/css">
 	<?php } else if ( is_page('9') || is_single() ) {?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/blog.css" type="text/css">
+		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/SyntaxHighlighter.css"></link>
 	<?php } else if ( is_page('11') ) {?>	
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/contact.css" type="text/css">
 	<?php } ?>

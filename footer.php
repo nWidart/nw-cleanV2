@@ -52,6 +52,18 @@
   </div>
 </div><!-- end footer-dark -->
 
+
+<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shCore.js"></script>
+<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushCss.js"></script>
+<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushXml.js"></script>
+<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushJScript.js"></script>
+<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushPhp.js"></script>
+<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushSql.js"></script>
+
+<script language="javascript">
+dp.SyntaxHighlighter.ClipboardSwf = '/library/flash/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
 <script src="<?php bloginfo('stylesheet_directory') ?>/library/js/functions.js"></script>
 <script type="text/javascript">
 // Flexslider
