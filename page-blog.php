@@ -60,7 +60,13 @@ Template Name: Blog
   					<p><i class="icon-list-alt"></i> <!-- <span>Category:</span> --> <a href=""><?php the_category(', ') ?></a></p>
   				</li>
   				<li>
-  					<p><i class="icon-comment"></i> <!-- <span>Comments:</span> --> <a href="#disqus_thread">Comments</a></p>
+  					<p>
+              <i class="icon-comment"></i> 
+                <span
+                  class="livefyre-commentcount"
+                  data-lf-site-id="{site_id}"
+                  data-lf-article-id="<?php the_ID(); ?>">0 Comments</span> 
+            </p>
   				</li>
   			</ul>
   		</div>

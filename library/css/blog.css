@@ -113,7 +113,10 @@ h4 {
   position: relative;
   margin: 5px 0;
 }
-
+a.btn {
+margin: 5px 0px;
+color : #FFF;
+}
 .check_list li:after,
 .arrow_list li:after,
 .blog .ul-list li:after {
@@ -190,7 +193,7 @@ body.single .entrycontent .eightcol {
 } 
 body.single .entrycontent .threecol {
   border-left:1px solid #112025;
-  padding-left:3.8%;
+  padding-left:2.4%;
   height: 90px;
 }
 body.single .entrycontent .blog-post-cover-img {
@@ -324,8 +327,12 @@ body.single .entrycontent {
 .meta_info {
   height: 100px;
 }
+.meta_info ul {
+  margin-bottom: 20px;
+}
 
 /*Comments section*/
+/*IntenseDebate Comments*/
 
 /*Changing the font & font-size*/
 #idc-container-parent #idc-container,
@@ -358,6 +365,21 @@ body.single .entrycontent {
   margin-bottom: 15px;
   text-shadow: none;
   line-height: 25px;
+}
+
+/*LiveFyre Comments*/
+.comments #livefyre #lf_fyre_head .lf_head_bar label.lf_comment_count {
+  color: #112025;
+  font-size: 22px;
+  font-family: "ColaborateLightRegular", "colaborate-2", CaviarDreamsBold, sans-serif;
+  font-weight: 100;
+  padding: 5px 0 0 0;
+  margin-bottom: 15px;
+  text-shadow: none;
+  line-height: 25px;
+ }
+.comments #livefyre .lf_comment .lf_comment_body {
+  background:red;
 }
 
 

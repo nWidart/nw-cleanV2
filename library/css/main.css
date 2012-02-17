@@ -155,7 +155,7 @@ h2 {
   -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0);
   box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0);
 }
-body.single .menu-item-24 a,
+body.single .header .menu-item-24 a,
 #menu-main-navigation-menu li a.active {
   background: #112025;
   color: #fff !important;
@@ -446,6 +446,11 @@ h6#preload {
   display: block;
   border: none;
 }
+body.single .footer2 .menu-item-24,
+.footer2 .current_page_item {
+  background: rgba(29, 55, 64, 0.15);
+}
+
 .footer2 ul li:hover {
   background: rgba(29, 55, 64, 0.15);
 }

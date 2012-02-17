@@ -180,17 +180,26 @@ $(document).ready(function () {
 // });
 
 </script>
+
 <script type="text/javascript">
+// DISQUS COMMENT COUNT SCRIPT
+
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'nicolaswidart'; // required: replace example with your forum shortname
+    //var disqus_shortname = 'nicolaswidart'; // required: replace example with your forum shortname
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+    //(function () {
+      //  var s = document.createElement('script'); s.async = true;
+        // s.type = 'text/javascript';
+        // s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        // (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    // }());
+</script>
+<script
+        type="text/javascript"
+        data-lf-domain="http://www.nicolaswidart.com"
+        src="http://zor.livefyre.com/wjs/v1.0/javascripts/CommentCount.js">
+        //LiveFyre Comment Count
 </script>
 </body>
 

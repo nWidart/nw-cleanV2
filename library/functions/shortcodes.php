@@ -35,7 +35,7 @@ function button( $atts, $content = null ) {
     ), $atts));
 	
 	if ($style == 'link') {	
-	$out = "<a class=\"btn btn-primary\" href=\"" .$link. "\">".do_shortcode($content). "<i class=\"icon-share-alt icon-white\"></i></a>";	
+	$out = "<a class=\"btn btn-primary\" href=\"" .$link. "\">".do_shortcode($content). "  <i class=\"icon-share-alt icon-white\"></i></a>";	
 	// $out = "<a href=\""  .$link. "\" class\"btn btn-primary\"> " .do_shortcode($content). "<i class=\"icon-share-alt icon-white\"></i></a>";
    } else {
 	$out = "<a class=\"btn btn-primary\" href=\"" .$link. "\">".do_shortcode($content). "</a>";
