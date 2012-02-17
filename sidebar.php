@@ -11,16 +11,7 @@
 			<p>First, I believe that this nation should commit itself to achieving the goal, before this decade is out, of landing a man on the moon and returning him safely to the earth.</p>
 			<h3>Categories</h3>
 			<ul class="ul-list">
-				<li><a href="">Technology</a></li>
-				<li><a href="">Tips & tricks</a>
-					<ul>
-						<li><a href="">Html & Css</a></li>
-						<li><a href="">Wordpress</a></li>
-						<li><a href="">jQuery</a></li>
-						<li><a href="">PHP</a></li>
-					</ul>
-				</li>
-				<li><a href="">Uncategorized</a></li>
+				<?php wp_list_cats('sort_column=name&optioncount=0&hierarchical=0Ž&hide_empty=0'.$exclude); ?>
 			</ul>
 			
 			

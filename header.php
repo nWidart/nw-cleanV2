@@ -65,20 +65,26 @@
 	<?php if ( is_front_page() ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/homepage.css" type="text/css" media="screen" />
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/flexslider.css" type="text/css">
+
 	<?php } elseif ( is_page('53') || '53' == $post->post_parent ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/portfolio.css" type="text/css">
-	<?php } else if ( is_page('9') || is_single() ) {?>
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/blog.css" type="text/css">
-		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/SyntaxHighlighter.css"></link>
-		<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/lf_Override.css"></link>
+
+	<?php } else if ( is_page('9') || is_single() || is_category() || is_tag() || is_search() ) {?>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/blog.css" type="text/css">
+	<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/SyntaxHighlighter.css"></link>
+	<link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/lf_Override.css"></link>
+
 	<?php } else if ( is_page('11') ) {?>	
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/contact.css" type="text/css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/contact.css" type="text/css">
+
 	<?php } ?>
 
 	
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/css3-mediaqueries.js"></script>
-	
+	<script type="text/javascript">
+  	var disqus_developer = 1; 
+	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.flexslider.js"></script>

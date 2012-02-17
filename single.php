@@ -63,10 +63,7 @@
           </li>
           <li>
             <p><i class="icon-comment"></i>
-            <span
-                  class="livefyre-commentcount"
-                  data-lf-site-id="{site_id}"
-                  data-lf-article-id="<?php the_ID(); ?>">0 Comments</span> 
+            <a href="#disqus_thread"><?php comments_number( 'no responses', 'one response', '% responses' ); ?></a>
             </p>
           </li>
         </ul>

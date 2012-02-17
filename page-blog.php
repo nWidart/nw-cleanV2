@@ -9,11 +9,11 @@ Template Name: Blog
 <div class="container blog">
   <div class="row">
   <?php 
-  //query_posts('&paged='.$paged );
-  //if ( have_posts() ) : while ( have_posts() ) : the_post();
-  // $query = new WP_Query('paged=' . get_query_var( 'paged' ));
-  $query = new WP_Query('posts_per_page=20');
-  while($query->have_posts()) : $query->the_post();
+  query_posts('&paged='.$paged );
+  if ( have_posts() ) : while ( have_posts() ) : the_post();
+  //$query = new WP_Query('paged=' . get_query_var( 'paged' ));
+  //$query = new WP_Query('posts_per_page=20');
+  //while($query->have_posts()) : $query->the_post();
 ?>
   	<div class="ninecol entrycontent"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php
@@ -28,7 +28,7 @@ Template Name: Blog
         $post_url = $blog_post_link;
       }
 ?>  	
-  		<h2 class="<?php echo $blog_post_type; ?>"><a href="<?php echo $post_url; ?>" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+  		<h2 id="title" class="<?php echo $blog_post_type; ?>"><a href="<?php echo $post_url; ?>" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 
   		<?php
       //getting thumbnail meta
@@ -51,21 +51,18 @@ Template Name: Blog
             <p><i class="icon-tags"></i> <?php the_tags(' ', ', ', ' '); ?></p>
           </li>
   				<li>
-  					<p><i class="icon-user"></i> <!-- <span>Author:</span> --> <a href=""><?php echo get_the_author(); ?></a></p>
+  					<p><i class="icon-user"></i> <a href="<?php echo get_the_author_link(); ?>"><?php echo get_the_author(); ?></a></p>
   				</li>
   				<li>
-  					<p><i class="icon-time"></i> <!-- <span>Date:</span> --> <?php the_time('d F, Y'); ?></p>
+  					<p><i class="icon-time"></i> <?php the_time('d F, Y'); ?></p>
   				</li>
   				<li>
-  					<p><i class="icon-list-alt"></i> <!-- <span>Category:</span> --> <a href=""><?php the_category(', ') ?></a></p>
+  					<p><i class="icon-list-alt"></i> <a href=""><?php the_category(', ') ?></a></p>
   				</li>
   				<li>
   					<p>
               <i class="icon-comment"></i> 
-                <span
-                  class="livefyre-commentcount"
-                  data-lf-site-id="{site_id}"
-                  data-lf-article-id="<?php the_ID(); ?>">0 Comments</span> 
+              <a href="<?php the_permalink(); ?>#disqus_thread"><?php comments_number( 'no responses', 'one response', '% responses' ); ?></a>
             </p>
   				</li>
   			</ul>
@@ -82,21 +79,18 @@ Template Name: Blog
     
    
 
-    <?php get_sidebar(); ?>
-    <?php endwhile; ?>
-	<?php wp_reset_postdata(); // reset the query ?>
-  <div class="ninecol">
     
-      <?php //posts_nav_link('sep','prelabel','nxtlabel'); ?>
-      <?php previous_posts_link('label','max_pages'); ?>
-
-      <?php next_posts_link('label','max_pages'); ?>
-  </div>
-     <?php 
+    <?php endwhile; endif; ?>
+	<?php wp_reset_postdata(); // reset the query ?>
+  <?php get_sidebar(); ?>
+  <div class="ninecol">
+    <?php 
       if(function_exists('wp_paginate')) {
       wp_paginate();
-      } 
+      }
     ?>
+  </div>
+     
     
   </div><!-- end row -->  
  
