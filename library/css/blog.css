@@ -185,8 +185,6 @@ div.p-seperator {
   border-right: 1px solid #112025;
   padding-right: 3.8%;
 }
-.entrycontent .threecol {}
-
 body.single .entrycontent .eightcol {
   border-right: none;
   padding-right: 0;
@@ -194,7 +192,7 @@ body.single .entrycontent .eightcol {
 body.single .entrycontent .threecol {
   border-left:1px solid #112025;
   padding-left:2.4%;
-  height: 90px;
+  height: 190px;
 }
 body.single .entrycontent .blog-post-cover-img {
   width: 100%;
@@ -247,8 +245,11 @@ body.single .entrycontent {
 }
 .pagination li {
   display: inline;
+  padding: 0 5px;
 }
-
+.pagination li:first-child {
+  padding: 0px;
+}
 
 /*previous / next button*/
 
@@ -342,3 +343,5 @@ a.dsq-brlink {
 .dsq-textarea-background {
 
 }
+
+

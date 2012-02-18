@@ -68,9 +68,9 @@
           </li>
         </ul>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="nicolaswidart" data-text="<?php the_title(); ?>" data-url="<?php the_permalink(); ?>">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
-fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         
         <!-- Place this tag where you want the +1 button to render -->
         <g:plusone size="tall" annotation="inline" href="<?php the_permalink(); ?>"></g:plusone>
@@ -87,12 +87,15 @@ fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script
         <div class="fb-like" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
 
       </div><!-- end threecol -->
-  		<!-- <div class="eightcol">
-  			<?php //the_content(); ?> 			
-  		</div> --><!-- end eightcol -->
+      
   	</div>
     <div class="ninecol">
       <?php the_content(); ?> 
+
+          <?php 
+      previous_post_link( '%link', '<< Previous post' );
+      next_post_link( '%link', 'Next post >>' );
+    ?>
     </div>
     
    

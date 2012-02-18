@@ -828,6 +828,15 @@ body.single .footer2 .menu-item-24,
     width: 10%;
   }
 }
+/*Iphone*/
+@media screen and (max-width: 320px) {
+
+.featured {
+  display:none;
+}
+
+} 
+
 /* ============================= */
 /* ! Layout for mobile version   */
 /* ============================= */

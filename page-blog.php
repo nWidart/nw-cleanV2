@@ -11,9 +11,6 @@ Template Name: Blog
   <?php 
   query_posts('&paged='.$paged );
   if ( have_posts() ) : while ( have_posts() ) : the_post();
-  //$query = new WP_Query('paged=' . get_query_var( 'paged' ));
-  //$query = new WP_Query('posts_per_page=20');
-  //while($query->have_posts()) : $query->the_post();
 ?>
   	<div class="ninecol entrycontent"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php
@@ -83,12 +80,16 @@ Template Name: Blog
     <?php endwhile; endif; ?>
 	<?php wp_reset_postdata(); // reset the query ?>
   <?php get_sidebar(); ?>
-  <div class="ninecol">
-    <?php 
+  <div class="ninecol pagination">
+    <?php
+      // Option 1 : Page numbers.
       if(function_exists('wp_paginate')) {
       wp_paginate();
       }
     ?>
+    <?php 
+    // Option 2: Next posts / previous posts link 
+    //posts_nav_link(); ?>
   </div>
      
     

@@ -1,12 +1,17 @@
-<?php
-
-?>
 <?php get_header(); ?>
 
-
+<div class="container breadcrump">
+  <div class="row">
+    <?php 
+    if ( function_exists('yoast_breadcrumb') ) {
+      yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+    }
+  ?>
+  </div>
+</div><!-- end breadcrump -->
 <div class="container blog">
   <div class="row">
-  <?php
+  <?php 
   if ( have_posts() ) : while ( have_posts() ) : the_post();
 ?>
     <div class="ninecol entrycontent"  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -56,7 +61,7 @@
           <li>
             <p>
               <i class="icon-comment"></i> 
-               <a href="<?php get_permalink(); ?>#disqus_thread"><?php comments_number( 'no responses', 'one response', '% responses' ); ?></a>
+              <a href="<?php the_permalink(); ?>#disqus_thread"><?php comments_number( 'no responses', 'one response', '% responses' ); ?></a>
             </p>
           </li>
         </ul>
@@ -74,25 +79,19 @@
    
 
     
-    <?php endwhile; else : ?>
-
-    <div class="container">
-    	<div class="row">
-    		<h2>Nothing Found</h2>
-			<p>Sorry, no posts matched your criteria.</p>
-    	</div>
-    </div>
-
-    <?php endif; ?>
-
+    <?php endwhile; endif; ?>
   <?php wp_reset_postdata(); // reset the query ?>
   <?php get_sidebar(); ?>
-  <div class="ninecol">
-    <?php 
+  <div class="ninecol pagination">
+    <?php
+      // Option 1 : Page numbers.
       if(function_exists('wp_paginate')) {
       wp_paginate();
       }
     ?>
+    <?php 
+    // Option 2: Next posts / previous posts link 
+    //posts_nav_link(); ?>
   </div>
      
     
