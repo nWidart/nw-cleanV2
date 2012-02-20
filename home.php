@@ -14,12 +14,16 @@
 				if ($featured_images != "") {
 					$images = explode(",", $featured_images);
 					foreach ($images as $image) {
+						$sliderPart = explode("|", $image);
+							
+						
 			?>
 								
 			<li>
-	    		<img src="<?php echo bloginfo('template_directory'); ?><?php echo $image;  ?>" />
+	    		<a href="<?php echo $sliderPart[1]; ?>"><img src="<?php echo bloginfo('template_directory'); ?><?php echo $sliderPart[0];  ?>" /></a>
 	    	</li>
 			<?php
+						
 					}
 				}
 			?>

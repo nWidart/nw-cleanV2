@@ -1,0 +1,41 @@
+/* ----------- design process styling --------------- */
+
+#designprocess {
+	list-style: none;
+	width: 1200px;
+	margin: 30px auto;
+}
+
+#designprocess li {
+	float: left;
+	position: relative;
+}
+#designprocess li a {
+	border:none;
+	text-decoration:none;
+}
+.dp-title {
+	position: absolute;
+	top: 47px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.research {
+	left: 22px;
+}
+.design {
+	left: 33px;
+}
+.build {
+	left: 39px;
+}
+.test {
+	left : 31px;
+}
+.launch {
+	left: 32px;
+}
+.support {
+	left: 31px;
+}

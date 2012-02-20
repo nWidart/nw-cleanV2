@@ -162,7 +162,7 @@
 .item figure {
   width: 100%;
   margin: 0;
-  height: 320px;
+  height: 300px;
   overflow: hidden;
   background: #000000 url(../img/overlay-view.png) no-repeat center center;
   border: 1px solid #fff;
@@ -205,10 +205,11 @@ a.item-title:hover {
   margin: 0;
 }
 .item-desc p a {
-  text-decoration: none;
+  display: none;
+  /*text-decoration: none;
   font-family: Geneva, Lucida Sans, Lucida Grande, Lucida Sans Unicode, Verdana, sans-serif;
   color: #222222;
-  border-bottom: 1px dotted rgba(17, 32, 37, 0.5);
+  border-bottom: 1px dotted rgba(17, 32, 37, 0.5);*/
 }
 .item-desc p a:hover {
   border-bottom: 1px solid #112025;

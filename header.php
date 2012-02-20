@@ -77,6 +77,8 @@
 	<?php } else if ( is_page('11') ) {?>	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/contact.css" type="text/css">
 
+	<?php } elseif ( is_page('7') ) { ?>
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/about.css" type="text/css">		
 	<?php } ?>
 
 	

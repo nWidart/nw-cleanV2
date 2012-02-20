@@ -17,10 +17,10 @@ Template Name: Portfolio
 	<h2>Portfolio</h2>
 		<ul id="filters">
 		  <li class="all"><a href="#" data-filter="*">show all</a></li>
-		  <li><a href="#" data-filter=".webdesign">Webdesign</a></li>
-		  <li><a href="#" data-filter=".logo">Logo design</a></li>
-		  <li><a href="#" data-filter=".mobile">Mobile applications</a></li>
-		  <li><a href="#" data-filter=".misc">Miscelaneous</a></li>
+		  <li><a href="#" data-filter=".webdesign" rel="twipsy" title="Only show webdesign related items">Webdesign</a></li>
+		  <li><a href="#" data-filter=".logo" rel="twipsy" title="Only show logo related items">Logo design</a></li>
+		  <li><a href="#" data-filter=".mobile" rel="twipsy" title="Only show mobile related items">Mobile applications</a></li>
+		  <li><a href="#" data-filter=".misc" rel="twipsy" title="Everything else">Miscelaneous</a></li>
 		</ul>  </div>
 </div><!-- end filter -->
 
