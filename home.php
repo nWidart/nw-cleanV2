@@ -14,16 +14,12 @@
 				if ($featured_images != "") {
 					$images = explode(",", $featured_images);
 					foreach ($images as $image) {
-						$sliderPart = explode("|", $image);
-							
-						
-			?>
-								
+						$sliderPart = explode("|", $image);			
+			?>					
 			<li>
 	    		<a href="<?php echo $sliderPart[1]; ?>"><img src="<?php echo bloginfo('template_directory'); ?><?php echo $sliderPart[0];  ?>" /></a>
 	    	</li>
-			<?php
-						
+			<?php		
 					}
 				}
 			?>
@@ -45,9 +41,17 @@
 
 <div class="container">
   <div class="row">
-    <h2>What I can do for you</h2>
+    <?php echo '<h2>' . __('What I can do for you', 'nw-clean') . '</h2>'; ?>
     <?php include('library/php/skillset.php'); ?>
   </div>
 </div><!-- end skill set -->
+<div class="container">
+	<div class="row">
+		<h2>What's next?</h2>
+		<p>
+			You can now check out <a href="/portfolio-iso" rel="twipsy" title="View all projects">my latest projects</a>, or <a href=""  rel="twipsy" title="Go to contact form">send me a message</a>. &#9786;
+		</p>
+	</div>
+</div>
 
 <?php get_footer(); ?>

@@ -40,7 +40,9 @@ function fb_add_body_class( $class ) {
 }
 // add_filter( 'post_class', 'fb_add_body_class' );
 
-
+//localising wordpress
+$lang = TEMPLATEPATH . '/lang';
+load_theme_textdomain('nw-clean', $lang);
 
 
 // A portfolio category
