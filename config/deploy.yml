@@ -1,0 +1,4 @@
+staging:
+  domain: "nicolasw@nicolaswidart.com"
+  deploy_to: "/www/dev/"
+  repository: "git@github.com:nWidart/nw-cleanV2.git"

@@ -59,7 +59,19 @@
 <script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushJScript.js"></script>
 <script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushPhp.js"></script>
 <script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushSql.js"></script>
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27833747-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 <script language="javascript">
 dp.SyntaxHighlighter.ClipboardSwf = '/library/flash/clipboard.swf';
 dp.SyntaxHighlighter.HighlightAll('code');
@@ -178,6 +190,8 @@ $(document).ready(function () {
 //       }
 //   });
 // });
+
+
 
 </script>
 

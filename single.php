@@ -89,7 +89,7 @@
       </div><!-- end threecol -->
       
   	</div>
-    <div class="ninecol">
+    <div class="ninecol post-content">
       <?php the_content(); ?> 
 
           <?php 

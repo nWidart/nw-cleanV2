@@ -12,6 +12,7 @@ $('.hover-image img,').live({
 $('a[rel=twipsy]').twipsy({'placement': 'above'});
 
 
+
 /////////////////////////////////////////////
 // Getting latest tweets
 /////////////////////////////////////////////
