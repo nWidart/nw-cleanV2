@@ -69,7 +69,7 @@
 	<?php } elseif ( is_page('53') || '53' == $post->post_parent ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/portfolio.css" type="text/css" />
 
-	<?php } else if ( is_page('9') || is_single() || is_category() || is_tag() || is_search() ) {?>
+	<?php } else if ( is_page('9') || is_single() || is_category() || is_tag() || is_search() || is_404()  ) {?>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/blog.css" type="text/css" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/SyntaxHighlighter.css" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/lf_Override.css" />

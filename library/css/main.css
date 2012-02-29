@@ -434,12 +434,15 @@ h6#preload {
   list-style: none;
 }
 .footer2 ul li {
-  float: right;
+  float: left;
   padding: 0 15px;
   -webkit-transition: background 0.3s ease;
   -moz-transition: background 0.3s ease;
   -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
+}
+.footer2 .menu-main-navigation-menu-container {
+  float: right;
 }
 .footer2 ul li a {
   text-decoration: none;

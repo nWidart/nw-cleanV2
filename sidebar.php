@@ -2,8 +2,7 @@
       <ul>
 				<form role="search" method="get" id="searchform" action="http://nicolaswidart.com/site/">
 					<div>
-						<input type="text" value="" name="s" id="s" class="search-input" placeholder="Type something you want to find"/>
-						<!-- <input type="submit" id="searchsubmit" value="Go" class="search-go"/> -->
+						<?php get_search_form(); ?>
 					</div>
 				</form>
 			</ul>

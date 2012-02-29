@@ -27,178 +27,36 @@ add_post_type_support( 'page', 'post-formats' );
 // and other custom post types if you have them
 
 
-
-// Styling post types
-// Adds classes for custom post types to body_class() and post_class()
-function fb_add_body_class( $class ) {
-	$post_type = 'standard'; // the Post Type
-	if ( get_query_var('post_type') === $post_type ) { // only, if post type is active
-		$class[] = $post_type;
-		$class[] = 'type-' . $post_type;
-	}
-	return $class;
-}
-// add_filter( 'post_class', 'fb_add_body_class' );
-
 //localising wordpress
 $lang = TEMPLATEPATH . '/lang';
 load_theme_textdomain('nw-clean', $lang);
 
-
-// A portfolio category
-add_action('init', 'project_custom_init');  
-
-/*-- Custom Post Init Begin --*/
-function project_custom_init()
-{
-  $labels = array(
-	'name' => _x('Projects', 'post type general name'),
-	'singular_name' => _x('Project', 'post type singular name'),
-	'add_new' => _x('Add New', 'project'),
-	'add_new_item' => __('Add New Project'),
-	'edit_item' => __('Edit Project'),
-	'new_item' => __('New Project'),
-	'view_item' => __('View Project'),
-	'search_items' => __('Search Projects'),
-	'not_found' =>  __('No projects found'),
-	'not_found_in_trash' => __('No projects found in Trash'),
-	'parent_item_colon' => '',
-	'menu_name' => 'Project'
-
-  );
-
- $args = array(
-	'labels' => $labels,
-	'public' => true,
-	'publicly_queryable' => true,
-	'show_ui' => true,
-	'show_in_menu' => true,
-	'query_var' => true,
-	'rewrite' => true,
-	'capability_type' => 'post',
-	'has_archive' => true,
-	'hierarchical' => false,
-	'menu_position' => null,
-	'supports' => array('title','editor','author','thumbnail','excerpt','comments')
-  );
-  // The following is the main step where we register the post.
-  register_post_type('project',$args);
-
-  // Initialize New Taxonomy Labels
-  $labels = array(
-	'name' => _x( 'Tags', 'taxonomy general name' ),
-	'singular_name' => _x( 'Tag', 'taxonomy singular name' ),
-	'search_items' =>  __( 'Search Types' ),
-	'all_items' => __( 'All Tags' ),
-	'parent_item' => __( 'Parent Tag' ),
-	'parent_item_colon' => __( 'Parent Tag:' ),
-	'edit_item' => __( 'Edit Tags' ),
-	'update_item' => __( 'Update Tag' ),
-	'add_new_item' => __( 'Add New Tag' ),
-	'new_item_name' => __( 'New Tag Name' ),
-  );
-	// Custom taxonomy for Project Tags
-	register_taxonomy('tagportfolio',array('project'), array(
-	'hierarchical' => true,
-	'labels' => $labels,
-	'show_ui' => true,
-	'query_var' => true,
-	'rewrite' => array( 'slug' => 'tag-portfolio' ),
-  ));
-
+// Registers the new post type and taxonomy
+function wpt_event_posttype() {
+    register_post_type( 'events',
+        array(
+            'labels' => array(
+                'name' => __( 'Events' ),
+                'singular_name' => __( 'Event' ),
+                'add_new' => __( 'Add New Event' ),
+                'add_new_item' => __( 'Add New Event' ),
+                'edit_item' => __( 'Edit Event' ),
+                'new_item' => __( 'Add New Event' ),
+                'view_item' => __( 'View Event' ),
+                'search_items' => __( 'Search Event' ),
+                'not_found' => __( 'No events found' ),
+                'not_found_in_trash' => __( 'No events found in trash' )
+            ),
+            'public' => true,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'comments' ),
+            'capability_type' => 'post',
+            'rewrite' => array("slug" => "events"), // Permalinks format
+            'menu_position' => 5,
+            'register_meta_box_cb' => 'add_events_metaboxes'
+        )
+    );
 }
-/*-- Custom Post Init Ends --*/
-
-/*--- Custom Messages - project_updated_messages ---*/
-add_filter('post_updated_messages', 'project_updated_messages');
-
-function project_updated_messages( $messages ) {
-  global $post, $post_ID;
-
-  $messages['project'] = array(
-	0 => '', // Unused. Messages start at index 1.
-	1 => sprintf( __('Project updated. <a href="%s">View project</a>'), esc_url( get_permalink($post_ID) ) ),
-	2 => __('Custom field updated.'),
-	3 => __('Custom field deleted.'),
-	4 => __('Project updated.'),
-	/* translators: %s: date and time of the revision */
-	5 => isset($_GET['revision']) ? sprintf( __('Project restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-	6 => sprintf( __('Project published. <a href="%s">View project</a>'), esc_url( get_permalink($post_ID) ) ),
-	7 => __('Project saved.'),
-	8 => sprintf( __('Project submitted. <a target="_blank" href="%s">Preview project</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-	9 => sprintf( __('Project scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview project</a>'),
-	  // translators: Publish box date format, see http://php.net/date
-	  date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-	10 => sprintf( __('Project draft updated. <a target="_blank" href="%s">Preview project</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-  );
-
-  return $messages;
-}
-
-/*--- #end SECTION - project_updated_messages ---*/
-
-	/*--- Demo URL meta box ---*/
-
-	add_action('admin_init','portfolio_meta_init');
-
-	function portfolio_meta_init()
-	{
-		// add a meta box for WordPress 'project' type
-		add_meta_box('portfolio_meta', 'Project Infos', 'portfolio_meta_setup', 'project', 'side', 'low');
-
-		// add a callback function to save any data a user enters in
-		add_action('save_post','portfolio_meta_save');
-	}
-
-	function portfolio_meta_setup()
-	{
-		global $post;
-
-		?>
-			<div class="portfolio_meta_control">
-				<label>URL</label>
-				<p>
-					<input type="text" name="_url" value="<?php echo get_post_meta($post->ID,'_url',TRUE); ?>" style="width: 100%;" />
-				</p>
-			</div>
-		<?php
-
-		// create for validation
-		echo '<input type="hidden" name="meta_noncename" value="' . wp_create_nonce(__FILE__) . '" />';
-	}
-
-	function portfolio_meta_save($post_id)
-	{
-		// check nonce
-		if (!isset($_POST['meta_noncename']) || !wp_verify_nonce($_POST['meta_noncename'], __FILE__)) {
-		return $post_id;
-		}
-
-		// check capabilities
-		if ('post' == $_POST['post_type']) {
-		if (!current_user_can('edit_post', $post_id)) {
-		return $post_id;
-		}
-		} elseif (!current_user_can('edit_page', $post_id)) {
-		return $post_id;
-		}
-
-		// exit on autosave
-		if (defined('DOING_AUTOSAVE') == DOING_AUTOSAVE) {
-		return $post_id;
-		}
-
-		if(isset($_POST['_url']))
-		{
-			update_post_meta($post_id, '_url', $_POST['_url']);
-		} else
-		{
-			delete_post_meta($post_id, '_url');
-		}
-	}
-
-	/*--- #end  Demo URL meta box ---*/
-
+add_action( 'init', 'wpt_event_posttype' );
 
 
 //include('library/functions/widgets.php)');
@@ -421,7 +279,7 @@ function twentyten_filter_wp_title( $title, $separator ) {
 	// Return the new title to wp_title():
 	return $title;
 }
-add_filter( 'wp_title', 'twentyten_filter_wp_title', 10, 2 );
+// add_filter( 'wp_title', 'twentyten_filter_wp_title', 10, 2 );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
