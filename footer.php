@@ -164,37 +164,42 @@ $(document).ready(function () {
       }
   });
 });
-
-
-// ------                                         --------/
-//fixing the portfolio items navigation if scrolled
-// ------                                         --------/
-// $(document).ready(function () {
-//   var target = $('.sub-nav .row');
-//   var top = target.offset().top - parseFloat(target.css('marginTop').replace(/auto/, 0));
-
-//   $(window).scroll(function (event) {
-//     // what the y position of the scroll is
-//     var y = $(this).scrollTop();
-//     //checking if the content doesnt touch the footer (if it does , not fixed)
-//     var maxY = ( $('.footer').offset().top ) - ( target.height() );
-//       // whether that's below the footer
-//       if (y >= top && y < maxY) {
-//         // if so, ad the fixed class
-//         target.addClass('fixed');
-//         $('.sub-nav').addClass('fix');
-//       } else {
-//         // otherwise remove it
-//         target.removeClass('fixed');
-//         $('.sub-nav').removeClass('fix');
-//       }
-//   });
-// });
-
-
-
 </script>
-
+<script type="text/javascript" charset="utf-8">
+ 
+    function checkWidth () {
+ 
+        // Get the height of the div and set it in a variable called mabileNavHeight to access later
+        var mobileNavHeight = $('.mobile').height();
+ 
+        // Check to see if the browser width is less than 480px wide
+        if ($(window).width() < 481) {
+            $('.header').css({
+                // Change the CSS top value of #site to whatever mobileNavHeight outputs
+                top: mobileNavHeight + 'px !important'
+            });
+            
+            // Scroll the window the height of mobileNavHeight
+            $(window).scrollTop(mobileNavHeight);
+        }
+ 
+        // Check to see if the browser width is more than 480px wide
+        else if ($(window).width() > 480) {
+            $('#site').css({
+                // Make sure the top value of #site is 0 so we don't see the space for the mobile nav
+                top: 0 + 'px'
+            });
+            // Scroll to the absolute top of the page
+            $(window).scrollTop(0);
+        }
+    }
+ 
+    $(document).ready(function(){
+        // Check the window size when page loads
+        checkWidth();
+    });
+ 
+</script>
 <script type="text/javascript">
 // DISQUS COMMENT COUNT SCRIPT
 
@@ -208,12 +213,6 @@ $(document).ready(function () {
         s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
-</script>
-<script
-        type="text/javascript"
-        data-lf-domain="http://www.nicolaswidart.com"
-        src="http://zor.livefyre.com/wjs/v1.0/javascripts/CommentCount.js">
-        //LiveFyre Comment Count
 </script>
 </body>
 

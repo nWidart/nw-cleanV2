@@ -48,7 +48,13 @@
 	<?php echo $content; ?>
 	
 	
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title>
+	<?php 
+	/* 
+	 * Yoast SEO does the title
+	 */
+	wp_title(''); ?>
+	</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
@@ -58,25 +64,17 @@
 	<!-- The 1140px Grid - http://cssgrid.net/ -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/1140.css" type="text/css" media="screen" />
 	
-	<!-- Your styles -->
+	<!-- Personal styles -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/main.css" type="text/css" media="screen" />
-		
 	<?php if ( is_front_page() ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/homepage.css" type="text/css" media="screen" />
-     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/flexslider.css" type="text/css">
-
 	<?php } elseif ( is_page('53') || '53' == $post->post_parent ) { ?>
      <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/portfolio.css" type="text/css" />
-
 	<?php } else if ( is_page('9') || is_single() || is_category() || is_tag() || is_search() || is_404()  ) {?>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/blog.css" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/SyntaxHighlighter.css" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/lf_Override.css" />
-
 	<?php } else if ( is_page('11') ) {?>	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/contact.css" type="text/css" />
-
 	<?php } elseif ( is_page('7') ) { ?>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/about.css" type="text/css" />
 	<?php } ?>
@@ -110,6 +108,14 @@
 
 </head>
 <body <?php body_class(); ?>>
+<?php 
+	wp_nav_menu (array(
+		'menu'=>'Main Navigation Menu',
+		'container' => 'nav',
+		'container_class' => 'mobile',
+		'items_wrap' => '<ul>%3$s</ul>'
+	));
+?>
 <div id="logobg"></div>
 <div class="container header">
 
@@ -119,11 +125,14 @@
 			
 		</div>
 		<div class="sixcol last">
-		<!-- <ul id="main-navigation"> -->
 			<?php 
-				wp_nav_menu (array('menu'=>'Main Navigation Menu'));
+				wp_nav_menu (array(
+					'menu'=>'Main Navigation Menu',
+					'container' => 'nav',
+					'container_class' => 'main',
+				));
 			?>
-		<!-- </ul> -->
+			
 		</div>
 	</div>
 
