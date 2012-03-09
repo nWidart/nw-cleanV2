@@ -63,6 +63,7 @@
 
 	<!-- The 1140px Grid - http://cssgrid.net/ -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/1140.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/library/css/hugrid.css" type="text/css" media="screen" />
 	
 	<!-- Personal styles -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -82,14 +83,7 @@
 	
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/css3-mediaqueries.js"></script>
-	<script type="text/javascript">
-  	var disqus_developer = 1; 
-	</script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.flexslider.js"></script>
-	<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/bootstrap-twipsy.js"></script>
-	<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.isotope.min.js"></script>
+	
 
 <?php
 	/* We add some JavaScript to pages with the comment form
@@ -108,6 +102,7 @@
 
 </head>
 <body <?php body_class(); ?>>
+<?php get_template_part('notificationbar'); ?>
 <?php 
 	wp_nav_menu (array(
 		'menu'=>'Main Navigation Menu',

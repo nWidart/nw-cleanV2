@@ -53,12 +53,35 @@
 </div><!-- end footer-dark -->
 
 
-<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shCore.js"></script>
-<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushCss.js"></script>
-<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushXml.js"></script>
-<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushJScript.js"></script>
-<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushPhp.js"></script>
-<script language="javascript" src="<?php bloginfo('stylesheet_directory') ?>/library/js/shBrushSql.js"></script>
+<script type="text/javascript">
+    var disqus_developer = 1; 
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.flexslider.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/bootstrap-twipsy.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.isotope.min.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/jquery.noty.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/hugrid.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/library/js/keyboard_page.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        pageUnits = 'px';
+        colUnits = '%';
+        pagewidth = 1140;
+        columns = 12;
+        columnwidth = 4.85;
+        gutterwidth = 3.8;
+        pagetopmargin = 41;
+        rowheight = 16;
+        gridonload = 'off';
+        makehugrid();
+        setgridonload();
+    });
+</script>
+
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -72,10 +95,7 @@
   })();
 
 </script>
-<script language="javascript">
-dp.SyntaxHighlighter.ClipboardSwf = '/library/flash/clipboard.swf';
-dp.SyntaxHighlighter.HighlightAll('code');
-</script>
+
 <script src="<?php bloginfo('stylesheet_directory') ?>/library/js/functions.js"></script>
 <script type="text/javascript">
 // Flexslider
@@ -140,6 +160,14 @@ $(window).smartresize(function(){
 });
 
 //End filter script
+
+// Noty - notification jQuery script
+// $('.noty-trigger').click(function() {
+//   noty({text: '<a href="#">link</a>'});
+// });
+
+
+
 
 // ------                                         --------/
 //fixing the portfolio single page content if scrolled
@@ -213,6 +241,55 @@ $(document).ready(function () {
         s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
+
+
+// Expand the language-bar 
+(function() {
+  
+  var languageBar = {
+    container : $('.notification-bar'),
+    span : $('.noty-trigger i'),
+    i : 0,
+
+    init: function() {
+      if ( languageBar.i === 0 ) {
+        languageBar.span.on( 'click', function() {
+          languageBar.container.slideToggle();
+          i : 1;
+
+        });
+      } else if ( languageBar.i === 1 ) {
+        languageBar.span.on( 'click', function() {
+          alert('ohey')
+        });
+      }
+
+    },
+    show: function() {
+      var lb = languageBar,
+          container = lb.container,
+          span = lb.span;
+
+      //languageBar.container.slideToggle();
+      if ( container.is(':hidden') ) {
+        languageBar.container.slideDown();
+        languageBar.span.removeClass('icon-plus-sign');
+        languageBar.span.addClass('icon-minus-sign');
+      }
+      
+    },
+    close: function() {
+      if ( container.is(':visible') ) {
+        $("span.noty-trigger").on("click", function() {
+          languageBar.container.slideUp();
+        });
+      }
+    }
+  };
+
+languageBar.init();
+
+})();
 </script>
 </body>
 

@@ -30,8 +30,20 @@ if ( ! function_exists('nwclean_setup') ) :
 		 * Adding support for post thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
+		/* 
+		 * disabling adming bar
+		 */
+		show_admin_bar(false);
 	}
 endif;
+/* ------------------------------------------------------------------------------------------------------------------------
+ * Testing the localization
+ */
+// function test_localization( $locale ) {
+// 	return "fr_FR";
+// }
+// add_filter('locale','test_localization');
+
 /* ------------------------------------------------------------------------------------------------------------------------
  * Tell WordPress to run nwclean_setup() when the 'after_setup_theme' hook is run.
  */
@@ -77,11 +89,33 @@ add_filter( 'wp_page_menu_args', 'twentyten_page_menu_args' );
  * Register widgetized area and update sidebar with default widgets
  */
 function nwclean_widgets_init() {
+	// Area 1, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'First Footer Widget Area', 'nw-cleanv2' ),
+		'id' => 'first-footer-widget-area',
+		'description' => __( 'The first footer widget area', 'nw-cleanv2' ),
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 2, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Second Footer Widget Area', 'nw-cleanv2' ),
+		'id' => 'second-footer-widget-area',
+		'description' => __( 'The second footer widget area', 'nw-cleanv2' ),
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
 	// Area 3, located in the footer. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'First Footer Widget Area', 'twentyten' ),
-		'id' => 'first-footer-widget-area',
-		'description' => __( 'The first footer widget area', 'twentyten' ),
+		'name' => __( 'Third Footer Widget Area', 'nw-cleanv2' ),
+		'id' => 'third-footer-widget-area',
+		'description' => __( 'The third footer widget area', 'nw-cleanv2' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
@@ -90,23 +124,12 @@ function nwclean_widgets_init() {
 
 	// Area 4, located in the footer. Empty by default.
 	register_sidebar( array(
-		'name' => __( 'Second Footer Widget Area', 'twentyten' ),
-		'id' => 'second-footer-widget-area',
-		'description' => __( 'The second footer widget area', 'twentyten' ),
+		'name' => __( 'Language bar', 'nw-cleanv2' ),
+		'id' => 'language-bar',
+		'description' => __( 'The language bar', 'nw-cleanv2' ),
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Area 5, located in the footer. Empty by default.
-	register_sidebar( array(
-		'name' => __( 'Third Footer Widget Area', 'twentyten' ),
-		'id' => 'third-footer-widget-area',
-		'description' => __( 'The third footer widget area', 'twentyten' ),
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
-		'before_title' => '<h3 class="widget-title">',
+		'before_title' => '<h3 class="widget-lang-title">',
 		'after_title' => '</h3>',
 	) );
 }
@@ -185,3 +208,18 @@ jQuery(document).ready(function() {
  * Include shortcodes
  */
 include('library/functions/shortcodes.php');
+
+
+include_once 'metaboxes/setup.php';
+
+include_once 'metaboxes/portfolio-spec.php';
+ 
+// include_once 'metaboxes/full-spec.php';
+
+// include_once 'metaboxes/checkbox-spec.php';
+
+// include_once 'metaboxes/radio-spec.php';
+
+// include_once 'metaboxes/select-spec.php';
+
+/* eof */

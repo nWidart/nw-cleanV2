@@ -39,3 +39,4 @@ function showTweets(elem, username, number)
 			showTweets($('#tweets'), 'NicolasWidart', 5)
 			
 		});
+

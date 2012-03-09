@@ -34,20 +34,22 @@
 <div class="container quote">
 	<div class="row">
 		<div class="quote-top"></div><!-- end quote-top -->
-			<p><em>CSS</em>, <em>HTML</em>, <em>Photoshop</em>, <em>Wordpress</em><br />Yes you're right, I'm a <em>webdesigner</em> and I love it!</p>
+			<?php 
+			echo '<p><em>CSS</em>, <em>HTML</em>, <em>Photoshop</em>, <em>Wordpress</em><br />' . __('Yes your\'re right, I\'m a ','nw-cleanv2') . '<em>' . __('webdesigner', 'nw-cleanv2') . '</em>' . __('and I love it!','nw-cleanv2') . '</p>';
+			?>
 		<div class="quote-bottom"></div><!-- end quote bottom -->
 	</div>
 </div><!-- end  quote -->
 
 <div class="container">
   <div class="row">
-    <?php echo '<h2>' . __('What I can do for you', 'nw-clean') . '</h2>'; ?>
+    <h2><?php _e('What I can do for you', 'nw-cleanv2') ?></h2>
     <?php include('library/php/skillset.php'); ?>
   </div>
 </div><!-- end skill set -->
 <div class="container">
 	<div class="row">
-		<h2>What's next?</h2>
+		<?php echo '<h2>' .  __('What\'s next?', 'nw-cleanv2') . '</h2>'; ?>
 		<p>
 			You can now check out <a href="/portfolio-iso" rel="twipsy" title="View all projects">my latest projects</a>, or <a href=""  rel="twipsy" title="Go to contact form">send me a message</a>. &#9786;
 		</p>
